@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-04-14T22:01:02 WIB" name="AE loginSuite Chrome" finished-at="2022-04-14T22:01:43 WIB" duration-ms="41451">
+  <suite started-at="2022-04-15T00:35:55 WIB" name="AE loginSuite Chrome" finished-at="2022-04-15T00:36:01 WIB" duration-ms="5565">
     <groups>
     </groups>
-    <test started-at="2022-04-14T22:01:02 WIB" name="automation experience" finished-at="2022-04-14T22:01:43 WIB" duration-ms="41451">
+    <test started-at="2022-04-15T00:35:55 WIB" name="automation experience" finished-at="2022-04-15T00:36:01 WIB" duration-ms="5565">
       <class name="com.AutomationExperience.testCases.LoginTest_001">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.AutomationExperience.testCases.LoginTest_001@26e356f0]" started-at="2022-04-14T22:01:02 WIB" name="setup" finished-at="2022-04-14T22:01:05 WIB" duration-ms="3391" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.AutomationExperience.testCases.LoginTest_001@6bd61f98]" started-at="2022-04-15T00:35:56 WIB" name="setup" finished-at="2022-04-15T00:35:59 WIB" duration-ms="3685" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,11 +18,51 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="login_01()[pri:0, instance:com.AutomationExperience.testCases.LoginTest_001@26e356f0]" started-at="2022-04-14T22:01:05 WIB" name="login_01" finished-at="2022-04-14T22:01:43 WIB" duration-ms="37589" status="PASS">
+        <test-method signature="login_01(java.lang.String,java.lang.String)[pri:0, instance:com.AutomationExperience.testCases.LoginTest_001@6bd61f98]" started-at="2022-04-15T00:35:59 WIB" name="login_01" data-provider="login data" finished-at="2022-04-15T00:36:01 WIB" duration-ms="1490" status="FAIL">
+          <exception class="org.testng.internal.reflect.MethodMatcherException">
+            <message>
+              <![CDATA[
+[public void com.AutomationExperience.testCases.LoginTest_001.login_01(java.lang.String,java.lang.String) throws java.io.IOException] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
+Data provider mismatch
+Method: login_01([Parameter{index=0, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=1, type=java.lang.String, declaredAnnotations=[]}])
+Arguments: []]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.internal.reflect.MethodMatcherException: 
+[public void com.AutomationExperience.testCases.LoginTest_001.login_01(java.lang.String,java.lang.String) throws java.io.IOException] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
+Data provider mismatch
+Method: login_01([Parameter{index=0, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=1, type=java.lang.String, declaredAnnotations=[]}])
+Arguments: []
+at org.testng.internal.reflect.DataProviderMethodMatcher.getConformingArguments(DataProviderMethodMatcher.java:43)
+at org.testng.internal.Parameters.injectParameters(Parameters.java:914)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:34)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.internal.reflect.MethodMatcherException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login_01 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.AutomationExperience.testCases.LoginTest_001@26e356f0]" started-at="2022-04-14T22:01:43 WIB" name="tearDown" finished-at="2022-04-14T22:01:43 WIB" duration-ms="170" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.AutomationExperience.testCases.LoginTest_001@6bd61f98]" started-at="2022-04-15T00:36:01 WIB" name="tearDown" finished-at="2022-04-15T00:36:01 WIB" duration-ms="112" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

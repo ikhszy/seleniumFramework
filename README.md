@@ -10,3 +10,5 @@ My selenium solo project for my own improvement as QA engineer. Using http://aut
 **Update 1 (April 17th 2022)**
 
 finally finished the framework setup and Jenkins(!) to be able to run locally. Will start working with Test Document to serve as the base document.
+
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/57410839/163687284-b6b3ddb6-7f8e-4acf-a54f-711a5054af35.png">

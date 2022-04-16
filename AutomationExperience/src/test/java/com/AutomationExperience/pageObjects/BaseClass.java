@@ -6,6 +6,13 @@ import org.testng.annotations.Parameters;
 
 import com.AutomationExperience.utilities.ReadConfig;
 
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang3.RandomStringUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -45,5 +52,29 @@ public class BaseClass {
 	public void tearDown() {
 		driver.quit();
 	}
+	
+	public void captureScreen(WebDriver driver, String sname) throws IOException {
+		TakesScreenshot ts = (TakesScreenshot) driver;
+		File source = ts.getScreenshotAs(OutputType.FILE);
+		File target = new File(System.getProperty("user.dir") + "/Screenshots/" + sname + ".png");
+		FileUtils.copyFile(source, target);
+		System.out.println("Screenshot taken");
+	}
+	
+	public String randomString() {
+		String rdmString = RandomStringUtils.randomAlphabetic(8);
+		return rdmString;
+	}
+	
+	public String randomNumber() {
+		String rdmNum = RandomStringUtils.randomNumeric(3);
+		return rdmNum;
+	}
 
 }
+
+
+
+
+
+

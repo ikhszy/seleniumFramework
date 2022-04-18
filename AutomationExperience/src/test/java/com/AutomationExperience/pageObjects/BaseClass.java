@@ -1,6 +1,7 @@
 package com.AutomationExperience.pageObjects;
 
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterGroups;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 
@@ -34,7 +35,7 @@ public class BaseClass {
 		if(br.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver", reader.getChromepath());
 			ChromeOptions options = new ChromeOptions();
-	//		options.addArguments("--headless");
+			options.addArguments("--headless");
 			driver = new ChromeDriver(options);
 			driver.manage().window().maximize();
 			driver.manage().deleteAllCookies();

@@ -16,10 +16,12 @@ public class SignInPageObj {
 		PageFactory.initElements(sdriver, this);
 	}
 	
-	
 	@FindBy(xpath="//*[@id=\"header\"]/div[2]/div/div/nav/div[1]/a")
 	@CacheLookup
-	WebElement signInButton;
+	public WebElement signInButton;
+	
+	@FindBy(xpath = "//*[@id=\"header\"]/div[2]/div/div/nav/div[1]/a")
+	WebElement signInButtonAfter;
 	
 	@FindBy(id="email")
 	@CacheLookup
@@ -32,7 +34,16 @@ public class SignInPageObj {
 	WebElement forgotPassword;
 	
 	@FindBy(id="SubmitLogin")
-	WebElement loginButton;
+	public WebElement loginButton;
+	
+	@FindBy(xpath = "//*[@id=\"center_column\"]/div[1]")
+	public WebElement ErrorColumn;
+	
+	@FindBy(xpath = "//*[@id=\"center_column\"]/div[1]/p")
+	public WebElement errorHeader;
+	
+	@FindBy(xpath = "//*[@id=\"center_column\"]/div[1]/ol/li")
+	public WebElement errorText;
 	
 	public void signClick() {
 		signInButton.click();

@@ -2,8 +2,6 @@ package com.AutomationExperience.utilities;
 
 import java.io.File;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 import org.testng.ITestContext;
 import org.testng.ITestResult;
@@ -38,7 +36,7 @@ public class Reporting extends TestListenerAdapter {
 		extent.setSystemInfo("Environment","QA");
 		extent.setSystemInfo("user","Ikhsan");
 		
-		htmlReporter.config().setDocumentTitle("InetBanking Test Project"); // Tile of report
+		htmlReporter.config().setDocumentTitle("Automation Experience Report"); // Tile of report
 		htmlReporter.config().setReportName("Functional Test Automation Report"); // name of the report
 		htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP); //location of the chart
 		htmlReporter.config().setTheme(Theme.DARK);

@@ -42,8 +42,10 @@ public class SignupTest extends BaseClass {
 		
 		if(cssvalues.contains("221, 249, 225")) {
 			Assert.assertTrue(true);
+			System.out.println("SGN001 - 1st assert pass");
 		} else {
 			Assert.assertTrue(false);
+			System.out.println("SGN001 - 1st assert fail");
 		}
 		
 		sgn.createButton();
@@ -52,8 +54,10 @@ public class SignupTest extends BaseClass {
 		
 		if(sgu.personalEmail.isDisplayed()) {
 			Assert.assertTrue(true);
+			System.out.println("SGN001 - 2nd assert pass");
 		} else {
 			Assert.assertTrue(false);
+			System.out.println("SGN001 - 2nd assert fail");
 		}
 	}
 	
@@ -73,12 +77,21 @@ public class SignupTest extends BaseClass {
 		
 		sgn.createEmailText.sendKeys(Keys.TAB);
 		
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		String cssvalues = sgn.createEmailText.getCssValue("background-color");
 		
 		if(cssvalues.contains("255, 241, 242")) {
 			Assert.assertTrue(true);
+			System.out.println("SGN002 - 1st assert pass");
 		} else {
 			Assert.assertTrue(false);
+			System.out.println("SGN002 - 1st assert fail");
 		}
 		
 		sgn.createButton();
@@ -88,8 +101,10 @@ public class SignupTest extends BaseClass {
 		
 		if(errorText.equalsIgnoreCase("Invalid email address.")) {
 			Assert.assertTrue(true);
+			System.out.println("SGN002 - 2nd assert pass");
 		} else {
 			Assert.assertTrue(false);
+			System.out.println("SGN002 - 2nd assert fail");
 		}
 	}
 	
@@ -114,8 +129,10 @@ public class SignupTest extends BaseClass {
 		
 		if(cssvalues.contains("221, 249, 225")) {
 			Assert.assertTrue(true);
+			System.out.println("SGN003 - 1st assert pass");
 		} else {
 			Assert.assertTrue(false);
+			System.out.println("SGN003 - 1st assert fail");
 		}
 		
 		sgn.createButton();
@@ -123,10 +140,12 @@ public class SignupTest extends BaseClass {
 		wait.until(ExpectedConditions.visibilityOf(sgn.signupErrorAlert));
 		String errorText = sgn.signupErrorText.getText();
 		
-		if(errorText.equalsIgnoreCase("An account using this email address has already been registered. Please enter a valid password or request a new one. ")) {
+		if(errorText.equalsIgnoreCase("An account using this email address has already been registered. Please enter a valid password or request a new one.")) {
 			Assert.assertTrue(true);
+			System.out.println("SGN003 - 2nd assert pass");
 		} else {
 			Assert.assertTrue(false);
+			System.out.println("SGN003 - 2nd assert fail");
 		}
 	}
 	
@@ -151,8 +170,10 @@ public class SignupTest extends BaseClass {
 		
 		if(cssvalues.contains("255, 241, 242")) {
 			Assert.assertTrue(true);
+			System.out.println("SGN004 - 1st assert pass");
 		} else {
 			Assert.assertTrue(false);
+			System.out.println("SGN004 - 1st assert fail");
 		}
 		
 		sgn.createButton();
@@ -162,8 +183,10 @@ public class SignupTest extends BaseClass {
 		
 		if(errorText.equalsIgnoreCase("Invalid email address.")) {
 			Assert.assertTrue(true);
+			System.out.println("SGN004 - 2nd assert pass");
 		} else {
 			Assert.assertTrue(false);
+			System.out.println("SGN004 - 2nd assert fail");
 		}
 	}
 

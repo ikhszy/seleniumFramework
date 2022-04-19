@@ -10,8 +10,8 @@
   	<test thread-count="3" name="automation experience" verbose="2">
   	<parameter name = "browser" value="chrome" />
     	<classes>
-      		<class name="com.AutomationExperience.testCases.LoginTest">
-      		</class>
+      		<class name="com.AutomationExperience.testCases.LoginTest"/>
+      		<class name="com.AutomationExperience.testCases.SignupTest"/>
     	</classes>
   	</test> <!-- Default test -->
 </suite> <!-- Default suite -->

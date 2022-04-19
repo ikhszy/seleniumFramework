@@ -45,6 +45,18 @@ public class SignInPageObj {
 	@FindBy(xpath = "//*[@id=\"center_column\"]/div[1]/ol/li")
 	public WebElement errorText;
 	
+	@FindBy(id = "email_create")
+	public WebElement createEmailText;
+	
+	@FindBy(id = "SubmitCreate")
+	public WebElement createAccountButton;
+	
+	@FindBy(id = "create_account_error")
+	public WebElement signupErrorAlert;
+	
+	@FindBy(xpath = "//*[@id=\"create_account_error\"]/ol/li")
+	public WebElement signupErrorText;
+	
 	public void signClick() {
 		signInButton.click();
 	}
@@ -62,5 +74,13 @@ public class SignInPageObj {
 	
 	public void clickLogin() {
 		loginButton.click();
+	}
+	
+	public void createText(String createEmail) {
+		createEmailText.sendKeys(createEmail);
+	}
+	
+	public void createButton() {
+		createAccountButton.click();
 	}
 }

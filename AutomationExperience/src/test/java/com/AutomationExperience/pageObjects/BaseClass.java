@@ -1,9 +1,10 @@
 package com.AutomationExperience.pageObjects;
 
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterGroups;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
+import org.apache.log4j.PropertyConfigurator;
+import org.apache.log4j.Logger;
 
 import com.AutomationExperience.utilities.ReadConfig;
 
@@ -28,9 +29,14 @@ public class BaseClass {
 	public String password = reader.getPassword();
 	public static WebDriver driver;
 	
+	public static Logger logger;
+	
 	@Parameters("browser")
 	@BeforeClass
 	public void setup(String br) {
+		
+		logger = Logger.getLogger("automationExperience");
+		PropertyConfigurator.configure("log4j.properties");
 		
 		if(br.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver", reader.getChromepath());

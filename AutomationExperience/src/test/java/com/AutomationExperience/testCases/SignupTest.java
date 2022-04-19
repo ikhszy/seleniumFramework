@@ -48,9 +48,9 @@ public class SignupTest extends BaseClass {
 		
 		sgn.createButton();
 		
-		wait.until(ExpectedConditions.visibilityOf(sgu.personalFirstName));
+		wait.until(ExpectedConditions.visibilityOf(sgu.personalEmail));
 		
-		if(sgu.personalFirstName.isDisplayed()) {
+		if(sgu.personalEmail.isDisplayed()) {
 			Assert.assertTrue(true);
 		} else {
 			Assert.assertTrue(false);
